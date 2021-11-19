@@ -9,8 +9,8 @@ import com.thp.project.vintud.entity.Announcement;
 @Repository
 public interface AnnonceDAO {
 	
-	 public List<Announcement> findAnnouncementsById();
-	 public List<Announcement> findAnnonceByNomCategoryPrice(String p, int b);
+	 public List<Announcement> findAllAnnouncements();
+	 public List<Announcement> findAnnonceByNom(String p);
 	 public Announcement findAnnonceByPrice(String p);
 	 public Announcement findAnnonceByLocation(String l);
      public void InsertAnnonce(Announcement annonce);

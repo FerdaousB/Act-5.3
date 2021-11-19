@@ -48,7 +48,7 @@ public class AnnonceDAOImpl implements AnnonceDAO {
 
 	}
 	@Override
-	public List<Announcement> findAnnouncementsById() {
+	public List<Announcement> findAllAnnouncements() {
 
 		
 		Query query = entityManager.createQuery("Select annonce from Announcement annonce ");
@@ -57,11 +57,11 @@ public class AnnonceDAOImpl implements AnnonceDAO {
 	}
 
 	@Override
-	public List<Announcement> findAnnonceByNomCategoryPrice(String p, int b) {
+	public List<Announcement> findAnnonceByNom(String p) {
 		
 		Query query = entityManager.createQuery("Select annonce from Announcement annonce where annonce.nom like :x ");
-		query.setParameter(b, query);
-		return null;
+		query.setParameter("x", "%"+ p + "%");
+		return query.getResultList();
 	}
 
 	@Override
