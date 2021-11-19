@@ -2,9 +2,11 @@ package com.thp.project.vintud.dao;
 
 import java.util.List;
 
+import org.springframework.stereotype.Repository;
+
 import com.thp.project.vintud.entity.Announcement;
 
-
+@Repository
 public interface AnnonceDAO {
 	
 	 public List<Announcement> findAnnouncementsById();

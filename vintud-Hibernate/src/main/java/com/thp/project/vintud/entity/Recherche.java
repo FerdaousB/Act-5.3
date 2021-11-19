@@ -11,8 +11,6 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
-
-import com.thp.project.vintud.entity.impl.RechercheImpl;
 @Entity 
 @Table(name="recherche")
 public class Recherche implements Serializable{

@@ -14,7 +14,7 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
 @Entity 
-@Table(name="user")
+@Table(name="`user`")
 public class User implements Serializable {
         
 	    @Id 
@@ -55,8 +55,7 @@ public class User implements Serializable {
 		private Role role ;
 		
 	    
-		public List<Announcement> ListAnnoncePost;
-		public List<Announcement> ListAnnonceFavoris;
+		
 		
 		
 		

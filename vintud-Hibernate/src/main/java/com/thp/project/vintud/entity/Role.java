@@ -1,7 +1,6 @@
 package com.thp.project.vintud.entity;
 
 import java.io.Serializable;
-import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -11,8 +10,6 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
-import com.thp.project.vintud.entity.impl.RoleImpl;
-
 
 @Entity 
 @Table(name="role")
@@ -20,13 +17,13 @@ public class Role implements Serializable {
 	
 	@Id 
     @GeneratedValue(strategy=GenerationType.AUTO) 
-    @Column(name="id")
+    @Column(name="id_role")
 	private int id ;
 	
 	@Column(name="nom")
 	@NotNull
 	private String nom ;
-	private List<User> usersForThisRole ;
+	
 	
 	public Role() {
 	}

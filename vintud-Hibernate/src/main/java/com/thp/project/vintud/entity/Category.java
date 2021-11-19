@@ -2,16 +2,29 @@ package com.thp.project.vintud.entity;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 
 @Entity 
 @Table(name="categorie")
 public class Category implements Serializable{
 
-	
+	 @Id 
+     @GeneratedValue(strategy=GenerationType.AUTO) 
+     @Column(name="id_categorie")
 	private int id ;
+	 
+	@Column(name="name")
+	@NotNull
 	private String name  ;
+	
+	@Column(name="description")
+    @NotNull
 	private String description  ;
 	
 	

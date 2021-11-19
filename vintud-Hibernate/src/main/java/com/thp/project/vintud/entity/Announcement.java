@@ -6,6 +6,7 @@ import java.util.Objects;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -32,7 +33,7 @@ public class Announcement implements  Serializable{
 	private String description  ;
 	
 	@ManyToOne  
-	@JoinColumn( name="idCategory" )
+	@JoinColumn( name="id_categorie" )
 	private Category category;
 	
 	@Column(name="price")
@@ -59,7 +60,7 @@ public class Announcement implements  Serializable{
     @NotNull
 	private String localisation;
 	
-	@ManyToOne  
+	@ManyToOne(fetch=FetchType.LAZY) 
 	@JoinColumn( name="id_user" )
 	private User user;
 	
